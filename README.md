@@ -52,3 +52,35 @@ We are required to design an OPAMP having load capacitor CL = 10pF with the 3.3 
 - Unity Gain-bandwidth: GB ≥ 50MHz with a 4pF load capacitance.
 - Phase Margin: f(GB) ≥ 60° with a 4pF load capacitance.
 - Power dissipation: Pdiss ≤ 1mW.
+
+- ## 2. calculating the DC parameter using Dc analysis of nmos and pmos (μpCox and μnCox)
+- upcox = 295u
+- uncox = 370u
+- ![Virtuoso® Analog Design Environment L Editing_ RAHULP opampDC schematic@mirage 24-08-2023 14_12_36](https://github.com/Rahulprakash77/Two-stage-miller-compensated-OPAMP-design-/assets/130161648/9883e799-c44b-44f6-ab52-1aed1944b992)
+
+## 3. calculating the min and max threshold value of m1 and m3 mos
+vt3(max) = -417.717mV
+vt1(min) = 512.57mV
+vt3(max) = 597.31mV
+
+![Virtuoso® Analog Design Environment L Editing_ RAHULP opampDC schematic@mirage 24-08-2023 15_07_26](https://github.com/Rahulprakash77/Two-stage-miller-compensated-OPAMP-design-/assets/130161648/5a0d3ce9-809a-4976-b80d-b86564ddff07)
+
+## 4. designing full circuit and make proper wire connection
+![Virtuoso® Analog Design Environment L Editing_ RAHULP opamp1 schematic@mirage 23-08-2023 12_14_21](https://github.com/Rahulprakash77/Two-stage-miller-compensated-OPAMP-design-/assets/130161648/74432448-5893-4169-9f71-6e4819a2cf09)
+
+## Ac analysis ( bode plot) 
+![Virtuoso (R) Visualization   Analysis XL@mirage 24-08-2023 17_07_28](https://github.com/Rahulprakash77/Two-stage-miller-compensated-OPAMP-design-/assets/130161648/922b4a52-288a-4c4a-81ac-d18e887e0699)
+
+##  Calculation of Slew Rate.
+We know that according to target specifications the slew rate should be 20V/μsec. Lets see how much we are actually getting. Below is the setup for calculation of SR. I connected inverting terminal to output in unity gain closed loop form and provided pulse input at the non-inverting terminal and observed the transient reponse.
+
+from the wave output we get SR = 23.17 v/usec
+
+## Calculation of Input Common Mode Range (ICMR)
+To calculate the ICMR, I gave a random AC signal and I varied the Input common mode signal from 0 voltss to 3.3 volts. I observed the point with highest gain and 3db below point of it and noted the corresponding X co-ordinate values. 
+calculated value from plot is 0.95v < ICMR <1.8v
+## . Calculation of power dissipation
+calculated value from analysis of power dissipation is 1.023mW
+
+
+
