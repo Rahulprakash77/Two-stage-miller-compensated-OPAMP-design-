@@ -35,11 +35,11 @@ Designing a two-stage Miller compensated op-amp involves a combination of analog
 
 The project flow goes as follows:
 1. Declaring design specifications.
-2.calculating the DC parameter using Dc analysis of nmos and pmos (μpCox and μnCox).
-3.calculating the min and max threshold value of m1 and m3 mos
-4.designing full circuit and make proper wire connection
-5.check all mosfet working region through Dc analysis
-6.ploting bode plot through ac analysis
+2. calculating the DC parameter using Dc analysis of nmos and pmos (μpCox and μnCox).
+3. calculating the min and max threshold value of m1 and m3 mos
+4. designing full circuit and make proper wire connection
+5. check all mosfet working region through Dc analysis
+6. ploting bode plot through ac analysis
 7. checking all other parameter ( CMRR , slew rate , ICMR , power dissipation )
 
 
