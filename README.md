@@ -69,6 +69,7 @@ vt3(max) = 597.31mV
 ![Virtuoso® Analog Design Environment L Editing_ RAHULP opamp1 schematic@mirage 23-08-2023 12_14_21](https://github.com/Rahulprakash77/Two-stage-miller-compensated-OPAMP-design-/assets/130161648/74432448-5893-4169-9f71-6e4819a2cf09)
 
 ## Ac analysis ( bode plot) 
+**GBW = 30MHz and Phase Margin = 67 **
 ![Virtuoso (R) Visualization   Analysis XL@mirage 24-08-2023 17_07_28](https://github.com/Rahulprakash77/Two-stage-miller-compensated-OPAMP-design-/assets/130161648/922b4a52-288a-4c4a-81ac-d18e887e0699)
 
 ##  Calculation of Slew Rate.
