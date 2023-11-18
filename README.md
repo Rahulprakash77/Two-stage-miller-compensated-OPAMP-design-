@@ -1,6 +1,6 @@
 # Two-stage-miller-compensated-OPAMP-design-
 
-## basic theory abou two stage miller compensated opamp
+## basic theory about two stage miller compensated opamp
 
 
 A two-stage Miller compensated operational amplifier (op-amp) is a common architecture used in analog integrated circuits to amplify analog signals. It provides high gain, stability,
