@@ -6,6 +6,8 @@
 A two-stage Miller compensated operational amplifier (op-amp) is a common architecture used in analog integrated circuits to amplify analog signals. It provides high gain, stability,
 and a wide bandwidth. The Miller compensation technique is employed to enhance the stability of the op-amp, especially when dealing with capacitive loads. Here's a brief overview of the design:
 
+![image](https://github.com/user-attachments/assets/95553e43-708d-4e16-abb0-261348774c19)
+
 **1. First Stage (Input Differential Pair):**
 The first stage consists of a differential pair amplifier. This stage amplifies the input voltage difference (differential voltage) and provides a relatively high input impedance. The differential pair consists of two transistors (usually NMOS or PMOS) with their sources connected together. The drain currents of these transistors create a differential voltage at their common node.
 
