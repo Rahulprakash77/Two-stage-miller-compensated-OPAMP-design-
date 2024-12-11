@@ -46,40 +46,47 @@ The project flow goes as follows:
 
 # (A) NMOS Differential Input Two-Stage OPAMP
 ## 1. Declaring design specifications.
-We are required to design an OPAMP having load capacitor CL = 4pF with the 1.1 volts power supply. I used the TSMC 40nm node technology for this project. An OPAMP was designed to best meet the following specificatons:
+We are required to design an OPAMP having load capacitor CL = 2pF with the 1.1 volts power supply. I used the TSMC 40nm node technology for this project. An OPAMP was designed to best meet the following specificatons:
 
 - 𝗗𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝘁𝗶𝗮𝗹 𝘃𝗼𝗹𝘁𝗮𝗴𝗲 𝗴𝗮𝗶𝗻: 𝗔𝘃𝗱 ≥ 𝟱𝟬𝗱𝗕.
 - 𝗼𝗽𝗲𝗿𝗮𝘁𝗶𝗻𝗴 𝘃𝗼𝗹𝘁𝗮𝗴𝗲 𝘃𝗱𝗱 = 𝟭.𝟭 𝘃
 - 𝗦𝗹𝗲𝘄 𝗿𝗮𝘁𝗲: 𝗦𝗥 ≥ 𝟮𝟬 𝗩/μ𝗦.
 - 𝗜𝗻𝗽𝘂𝘁 𝗰𝗼𝗺𝗺𝗼𝗻 𝗺𝗼𝗱𝗲 𝗿𝗮𝗻𝗴𝗲: 𝗜𝗖𝗠𝗥 (𝟲𝟱𝟬𝗺 𝟵𝟬𝟬𝗺)
-- 𝗨𝗻𝗶𝘁𝘆 𝗚𝗮𝗶𝗻-𝗯𝗮𝗻𝗱𝘄𝗶𝗱𝘁𝗵: 𝗚𝗕 ≥ 𝟯𝟬𝗠𝗛𝘇 𝘄𝗶𝘁𝗵 𝗮 𝟰𝗽𝗙 𝗹𝗼𝗮𝗱 𝗰𝗮𝗽𝗮𝗰𝗶𝘁𝗮𝗻𝗰𝗲.
-- 𝗣𝗵𝗮𝘀𝗲 𝗠𝗮𝗿𝗴𝗶𝗻: 𝗳(𝗚𝗕) ≥ 𝟲𝟬° 𝘄𝗶𝘁𝗵 𝗮 𝟰𝗽𝗙 𝗹𝗼𝗮𝗱 𝗰𝗮𝗽𝗮𝗰𝗶𝘁𝗮𝗻𝗰𝗲.
+- 𝗨𝗻𝗶𝘁𝘆 𝗚𝗮𝗶𝗻-𝗯𝗮𝗻𝗱𝘄𝗶𝗱𝘁𝗵: 𝗚𝗕 ≥ 𝟯𝟬𝗠𝗛𝘇 𝘄𝗶𝘁𝗵 𝗮 𝟮𝗽𝗙 𝗹𝗼𝗮𝗱 𝗰𝗮𝗽𝗮𝗰𝗶𝘁𝗮𝗻𝗰𝗲.
+- 𝗣𝗵𝗮𝘀𝗲 𝗠𝗮𝗿𝗴𝗶𝗻: 𝗳(𝗚𝗕) ≥ 𝟲𝟬° 𝘄𝗶𝘁𝗵 𝗮 𝟮𝗽𝗙 𝗹𝗼𝗮𝗱 𝗰𝗮𝗽𝗮𝗰𝗶𝘁𝗮𝗻𝗰𝗲.
 - 𝗣𝗼𝘄𝗲𝗿 𝗱𝗶𝘀𝘀𝗶𝗽𝗮𝘁𝗶𝗼𝗻: 𝗣𝗱𝗶𝘀𝘀 ≤ 𝟭𝗺𝗪.
 
 ## 2. calculating the DC parameter using Dc analysis of nmos and pmos (μpCox and μnCox)
-upcox = 115u
+
+upcox = 115u , 
 uncox = 285u
- ![Virtuoso® Analog Design Environment L Editing_ RAHULP opampDC schematic@mirage 24-08-2023 14_12_36](https://github.com/Rahulprakash77/Two-stage-miller-compensated-OPAMP-design-/assets/130161648/9883e799-c44b-44f6-ab52-1aed1944b992)
+
+![betaeffctive](https://github.com/user-attachments/assets/173a8a26-fb37-4621-9ef3-be2dd1d0dc9e)
+
 
 ## 3. calculating the min and max threshold value of m1 and m3 mos
-Vtp = 485mV
+
+Vtp = 485mV ,
 Vtn = 460mV
 
-![Virtuoso® Analog Design Environment L Editing_ RAHULP opampDC schematic@mirage 24-08-2023 15_07_26](https://github.com/Rahulprakash77/Two-stage-miller-compensated-OPAMP-design-/assets/130161648/5a0d3ce9-809a-4976-b80d-b86564ddff07)
-
 ## 4. Designing full circuit and make proper wire connection
-![twoStage_nmos2](https://github.com/user-attachments/assets/e499fde2-d6f2-47b9-ae0f-744d8ab46b1f)
+
+![nmos2stageSchematic](https://github.com/user-attachments/assets/14fdaabc-4ac1-4e3b-9520-b95aca139718)
+
 
 ## 5. Ac analysis ( Bode plot) 
-**DCGain=52dB , GBW = 28.24MHz and Phase Margin = 63.52 , Bandwidth=119kHz**
-![Virtuoso (R) Visualization   Analysis XL@mirage 24-08-2023 17_07_28](https://github.com/Rahulprakash77/Two-stage-miller-compensated-OPAMP-design-/assets/130161648/922b4a52-288a-4c4a-81ac-d18e887e0699)
+**DCGain=52dB , GBW = 39.21MHz and Phase Margin = 61.93 , Bandwidth=164kHz**
+
+![nmos2stageacjpg](https://github.com/user-attachments/assets/3b06c168-f859-49b6-acd4-2d3f92ba032a)
+
 
 ## 6. Calculation of Slew Rate.
 We know that according to target specifications the slew rate should be 20V/μsec. Lets see how much we are actually getting. Below is the setup for calculation of SR. I connected inverting terminal to output in unity gain closed loop form and provided pulse input at the non-inverting terminal and observed the transient reponse.
 
-![pmos2stage_trans](https://github.com/user-attachments/assets/0556170e-afb1-442c-a483-7634acc8f67e)
+![nmos2stageSR](https://github.com/user-attachments/assets/0c50c973-4d14-4114-a126-d7160c56de1a)
 
-from the wave output we get SR = 26.17 v/usec
+
+from the wave output we get 𝗦𝗥 = 𝟯𝟯.𝟵 𝘃/𝘂𝘀𝗲𝗰 
 
 ## 7. CMRR Plot
 
@@ -108,15 +115,16 @@ We are required to design an OPAMP having load capacitor CL = 2pF with the 1.1 v
 - 𝗣𝗼𝘄𝗲𝗿 𝗱𝗶𝘀𝘀𝗶𝗽𝗮𝘁𝗶𝗼𝗻: 𝗣𝗱𝗶𝘀𝘀 ≤ 𝟭𝗺𝗪.
 
 ## 2. calculating the DC parameter using Dc analysis of nmos and pmos (μpCox and μnCox)
-upcox = 115u
+
+upcox = 115u , 
 uncox = 285u
- ![Virtuoso® Analog Design Environment L Editing_ RAHULP opampDC schematic@mirage 24-08-2023 14_12_36](https://github.com/Rahulprakash77/Two-stage-miller-compensated-OPAMP-design-/assets/130161648/9883e799-c44b-44f6-ab52-1aed1944b992)
+
+![betaeffctive](https://github.com/user-attachments/assets/173a8a26-fb37-4621-9ef3-be2dd1d0dc9e)
 
 ## 3. calculating the min and max threshold value of m1 and m3 mos
-Vtp = 485mV
-Vtn = 460mV
 
-![Virtuoso® Analog Design Environment L Editing_ RAHULP opampDC schematic@mirage 24-08-2023 15_07_26](https://github.com/Rahulprakash77/Two-stage-miller-compensated-OPAMP-design-/assets/130161648/5a0d3ce9-809a-4976-b80d-b86564ddff07)
+Vtp = 485mV , 
+Vtn = 460mV
 
 ## 4. Designing full circuit and make proper wire connection
 ![twoStage_pmos2](https://github.com/user-attachments/assets/1c0a62a8-f02c-4287-9317-129029bc161a)
@@ -132,7 +140,7 @@ We know that according to target specifications the slew rate should be 20V/μse
 ![pmos2stage_transt](https://github.com/user-attachments/assets/8b351a5e-2eb5-4603-8516-d455b9f62e41)
 
 
-from the wave output we get SR = 6.63 v/usec
+from the wave output we get 𝗦𝗥 = 𝟲.𝟲𝟯 𝘃/𝘂𝘀𝗲𝗰 
 
 ## 7. CMRR Plot
 ![pmos2stage_cmrr](https://github.com/user-attachments/assets/050d5b9e-20da-434c-b652-8d34ed28526a)
